@@ -43,11 +43,11 @@ public class Receptor {
 
         // * Printa em binário
 
-        System.out.println("Recebido: ");
-        for (int i = 0; i < bits.length; i++) {
-            System.out.print((bits[i]) ? 1 : 0);
-        }
-        System.out.println();
+        // System.out.println("Recebido: ");
+        // for (int i = 0; i < bits.length; i++) {
+        // System.out.print((bits[i]) ? 1 : 0);
+        // }
+        // System.out.println();
 
         // * Checa erros
 
@@ -76,46 +76,46 @@ public class Receptor {
         originalBits[7] = bits[11];
 
         if (!p0 && !p1 && !p2 && !p3) {
-            System.out.println("Nao foram detectados erros");
+            // System.out.println("Nao foram detectados erros");
         } else {
-            System.out.print("Simbolo Recebido: ");
-            decodificarDado(originalBits);
+            // System.out.print("Simbolo Recebido: ");
+            // decodificarDado(originalBits);
         }
 
         // * Corrige os Erros
 
         if (p0 && p1 && p2) {
-            System.out.println("erro no bit da posicao 6");
+            // System.out.println("erro no bit da posicao 6");
             bits[6] = !bits[6];
         } else if (p0 && p1 && p3) {
-            System.out.println("erro no bit da posicao 10");
+            // System.out.println("erro no bit da posicao 10");
             bits[10] = !bits[10];
         } else if (p0 && p1) {
-            System.out.println("erro no bit da posicao 2");
+            // System.out.println("erro no bit da posicao 2");
             bits[2] = !bits[2];
         } else if (p1 && p2) {
-            System.out.println("erro no bit da posicao 5");
+            // System.out.println("erro no bit da posicao 5");
             bits[5] = !bits[5];
         } else if (p2 && p3) {
-            System.out.println("erro no bit da posicao 11");
+            // System.out.println("erro no bit da posicao 11");
             bits[11] = !bits[11];
         } else if (p0 && p3) {
-            System.out.println("erro no bit da posicao 8");
+            // System.out.println("erro no bit da posicao 8");
             bits[8] = !bits[8];
         } else if (p0 && p2) {
-            System.out.println("erro no bit da posicao 4");
+            // System.out.println("erro no bit da posicao 4");
             bits[4] = !bits[4];
         } else if (p0) { // * Nao afeta o simbolo
-            System.out.println("erro no bit da posicao 3");
+            // System.out.println("erro no bit da posicao 3");
             bits[3] = !bits[3];
         } else if (p1) { // * Nao afeta o simbolo
-            System.out.println("erro no bit da posicao 1");
+            // System.out.println("erro no bit da posicao 1");
             bits[1] = !bits[1];
         } else if (p2) { // * Nao afeta o simbolo
-            System.out.println("erro no bit da posicao 3");
+            // System.out.println("erro no bit da posicao 3");
             bits[3] = !bits[3];
         } else if (p3) { // * Nao afeta o simbolo
-            System.out.println("erro no bit da posicao 7");
+            // System.out.println("erro no bit da posicao 7");
             bits[7] = !bits[7];
         }
 
@@ -130,17 +130,17 @@ public class Receptor {
         originalBits[6] = bits[10];
         originalBits[7] = bits[11];
 
-        System.out.print("Simbolo: ");
-        decodificarDado(originalBits);
+        // System.out.print("Simbolo: ");
+        // decodificarDado(originalBits);
 
         // * Printa em binário
 
-        System.out.println("Corrigido: ");
-        for (int i = 0; i < bits.length; i++) {
-            System.out.print((bits[i]) ? 1 : 0);
-        }
-        System.out.println();
-        System.out.println();
+        // System.out.println("Corrigido: ");
+        // for (int i = 0; i < bits.length; i++) {
+        // System.out.print((bits[i]) ? 1 : 0);
+        // }
+        // System.out.println();
+        // System.out.println();
 
         int codigoAscii = 0;
         int expoente = originalBits.length - 1;

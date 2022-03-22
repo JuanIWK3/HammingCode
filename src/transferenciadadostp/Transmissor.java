@@ -71,12 +71,12 @@ public class Transmissor {
 
         // * Printa em binário
 
-        System.out.println();
-        System.out.println("Enviado: ");
-        for (int i = 0; i < bitsWithHamming.length; i++) {
-            System.out.print((bitsWithHamming[i]) ? 1 : 0);
-        }
-        System.out.println();
+        // System.out.println();
+        // System.out.println("Enviado: ");
+        // for (int i = 0; i < bitsWithHamming.length; i++) {
+        // System.out.print((bitsWithHamming[i]) ? 1 : 0);
+        // }
+        // System.out.println();
 
         return bitsWithHamming;
     }
