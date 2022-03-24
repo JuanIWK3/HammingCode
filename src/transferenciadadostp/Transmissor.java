@@ -55,20 +55,33 @@ public class Transmissor {
         hammingBits[3] = bits[4] ^ bits[5] ^ bits[6] ^ bits[7];
 
         // * Colocar os bits de hamming e os bits originais nas suas posições
+        
+        int hammingCount = 0;
+        int bitsCount = 0;
 
-        bitsWithHamming[0] = hammingBits[0];
-        bitsWithHamming[1] = hammingBits[1];
-        bitsWithHamming[2] = bits[0];
-        bitsWithHamming[3] = hammingBits[2];
-        bitsWithHamming[4] = bits[1];
-        bitsWithHamming[5] = bits[2];
-        bitsWithHamming[6] = bits[3];
-        bitsWithHamming[7] = hammingBits[3];
-        bitsWithHamming[8] = bits[4];
-        bitsWithHamming[9] = bits[5];
-        bitsWithHamming[10] = bits[6];
-        bitsWithHamming[11] = bits[7];
-
+        for (int i = 0; i < bitsWithHamming.length; i++) {
+            if (i != 0 && i != 1 && i != 3 && i != 7) {
+                bitsWithHamming[i] = bits[bitsCount];
+                bitsCount++;
+            } else {
+                bitsWithHamming[i] = hammingBits[hammingCount];
+                hammingCount++;
+            }            
+        }
+        
+        // Hard Coded
+        // bitsWithHamming[0] = hammingBits[0];
+        // bitsWithHamming[1] = hammingBits[1];
+        // bitsWithHamming[2] = bits[0];
+        // bitsWithHamming[3] = hammingBits[2];
+        // bitsWithHamming[4] = bits[1];
+        // bitsWithHamming[5] = bits[2];
+        // bitsWithHamming[6] = bits[3];
+        // bitsWithHamming[7] = hammingBits[3];
+        // bitsWithHamming[8] = bits[4];
+        // bitsWithHamming[9] = bits[5];
+        // bitsWithHamming[10] = bits[6];
+        // bitsWithHamming[11] = bits[7];
         // * Printa em binário
 
         // System.out.println();
