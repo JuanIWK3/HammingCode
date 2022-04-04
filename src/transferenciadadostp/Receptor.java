@@ -72,7 +72,7 @@ public class Receptor {
             if (i != 0 && i != 1 && i != 3 && i != 7) {
                 originalBits[count] = bits[i];
                 count++;
-            }            
+            }
         }
 
         // Hard Coded

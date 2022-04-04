@@ -55,7 +55,7 @@ public class Transmissor {
         hammingBits[3] = bits[4] ^ bits[5] ^ bits[6] ^ bits[7];
 
         // * Colocar os bits de hamming e os bits originais nas suas posições
-        
+
         int hammingCount = 0;
         int bitsCount = 0;
 
@@ -66,9 +66,9 @@ public class Transmissor {
             } else {
                 bitsWithHamming[i] = hammingBits[hammingCount];
                 hammingCount++;
-            }            
+            }
         }
-        
+
         // Hard Coded
         // bitsWithHamming[0] = hammingBits[0];
         // bitsWithHamming[1] = hammingBits[1];
@@ -82,6 +82,7 @@ public class Transmissor {
         // bitsWithHamming[9] = bits[5];
         // bitsWithHamming[10] = bits[6];
         // bitsWithHamming[11] = bits[7];
+
         // * Printa em binário
 
         // System.out.println();
